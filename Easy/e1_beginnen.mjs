@@ -1,4 +1,5 @@
 /**
+ * E1: Beginnen bij het begin
  * In deze file staat reeds een begroeting dat je zal aansprekken met je name, age en favoriteGame.
  * Zorg ervoor dat je effectief je eigen naam, leeftijd en lievelingsspel te zien krijgt.
  */

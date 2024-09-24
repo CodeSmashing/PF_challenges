@@ -1,4 +1,5 @@
 /**
+ * E2: Content dynamischer maken
  * We gaan onze vorige oefening iets gaan aanpassen.
  * Vanaf nu willen we niet meer enkel deze dingen gaan bepalen in onze code, maar we gaan de gebruiker elke keer achter de input vragen.
  * De output van het script blijft dezelfde.
