@@ -13,10 +13,10 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let numberDays = parseInt(await userInput.question("Geef het aantal dagen: "));
-let numberHours = parseInt(await userInput.question("Geef het aantal uren: "));
-let numberMinute = parseInt(await userInput.question("Geef het aantal minuten: "));
-let numberSeconds = parseInt(await userInput.question("Geef het aantal seconden: "));
+let numberDays = parseInt(await userInput.question("Geef het aantal dagen: ")),
+	numberHours = parseInt(await userInput.question("Geef het aantal uren: ")),
+	numberMinute = parseInt(await userInput.question("Geef het aantal minuten: ")),
+	numberSeconds = parseInt(await userInput.question("Geef het aantal seconden: "));
 
 let totalSeconds = numberSeconds + (numberMinute * 60) + ((numberHours * 60) * 60) + (((numberDays * 24) * 60) * 60);
 

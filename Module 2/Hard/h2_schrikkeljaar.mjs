@@ -14,8 +14,8 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let userYear = parseInt(await userInput.question("Geef ons een jaartal: "));
-let leapYear = (userYear % 4 == 0 || userYear % 400 == 0) && userYear % 100 != 0 ? true : false;
+let userYear = parseInt(await userInput.question("Geef ons een jaartal: ")),
+	leapYear = (userYear % 4 == 0 || userYear % 400 == 0) && userYear % 100 != 0 ? true : false;
 
 console.log(`Het jaartal ${userYear} is ${leapYear ? "wel" : "geen"} een schrikkeljaar.`);
 

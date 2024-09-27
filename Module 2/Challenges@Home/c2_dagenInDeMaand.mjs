@@ -8,8 +8,8 @@ import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
 let userMonth = await userInput.question("Geef ons een maand: "),
-	userYear = parseInt(await userInput.question("Geef ons een jaartal: "));
-let leapYear = (userYear % 4 == 0 || userYear % 400 == 0) && userYear % 100 != 0 ? true : false;
+	userYear = parseInt(await userInput.question("Geef ons een jaartal: ")),
+	leapYear = (userYear % 4 == 0 || userYear % 400 == 0) && userYear % 100 != 0 ? true : false;
 
 switch (userMonth.toLowerCase()) {
 	case "jan":
@@ -30,11 +30,7 @@ switch (userMonth.toLowerCase()) {
 
 	case "feb":
 	case "februari":
-		if (leapYear) {
-			console.log("Deze maand bevat 29 dagen.");
-		} else {
-			console.log("Deze maand bevat 28 dagen.");
-		}
+		console.log(`Deze maand bevat ${leapYear ? 29 : 28} dagen.`);
 		break;
 
 	case "apr":

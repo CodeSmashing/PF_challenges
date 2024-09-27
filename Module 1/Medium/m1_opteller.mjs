@@ -8,13 +8,13 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let numberInt1 = 17;
-let numberInt2 = "10";
+let numberInt1 = 17,
+	numberInt2 = "10";
 
-let numberSum = numberInt1 + numberInt2;
-let numberDifference = numberInt1 - numberInt2;
-let numberProduct = numberInt1 * numberInt2;
-let numberDivision = numberInt1 / numberInt2;
+let numberSum = numberInt1 + numberInt2,
+	numberDifference = numberInt1 - numberInt2,
+	numberProduct = numberInt1 * numberInt2,
+	numberDivision = numberInt1 / numberInt2;
 
 console.log(`De gekozen getallen zijn ${numberInt1} en ${numberInt2}\nDe som van de getallen is: ${numberSum}\nHet verschill van de getallen is: ${numberDifference}\nHet product van de getallen is: ${numberProduct}\nDe deling van de getallen is: ${numberDivision}.`);
 

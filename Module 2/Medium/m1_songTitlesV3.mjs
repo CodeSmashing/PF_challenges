@@ -19,8 +19,9 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let menuString = "Kies een artiest:\n";
-let artistArray = [
+let menuString = "Kies een artiest:\n",
+	userChoice = 0,
+	artistArray = [
 	{ name: "Red Hot Chili Peppers", topSong: "CALIFORNICATION" },
 	{ name: "AC/DC", topSong: "Highway to Hell" },
 	{ name: "Netsky", topSong: "I Don't Even Know You Anymore" },
@@ -31,9 +32,9 @@ artistArray.forEach((artist, index) => {
 	menuString += `${index + 1}. ${artist.name}\n`; // We add 1 so we don't start the list with 0.
 });
 
-let userChoice = parseInt(await userInput.question(`${menuString}\nGeef je keuze in: `));
+userChoice = parseInt(await userInput.question(`${menuString}\nGeef je keuze in: `));
 
-// We write "--userChoice" to subtract 1 as the array starts counting at 0
+// We write "--userChoice" to subtract 1 as the array starts indexing at 0
 if (artistArray[--userChoice]) {
 	console.log(`Je koos voor "${artistArray[--userChoice].name}"\nZe zijn de artist achter de hit: ${artistArray[--userChoice].topSong}`);
 } else {

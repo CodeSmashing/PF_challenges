@@ -8,9 +8,8 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let futureYear = 2300; // Arbitrary number
-
-let birthYear = parseInt(await userInput.question("Wat is uw geboorte jaar? "));
+let futureYear = 2300, // Arbitrary number
+	birthYear = parseInt(await userInput.question("Wat is uw geboorte jaar? "));
 
 console.log(`In ${futureYear} zal ik ${futureYear - birthYear} of ${futureYear - birthYear + 1} jaar oud zijn`);
 

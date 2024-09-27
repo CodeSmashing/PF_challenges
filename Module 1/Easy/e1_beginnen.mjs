@@ -4,8 +4,8 @@
  * Zorg ervoor dat je effectief je eigen naam, leeftijd en lievelingsspel te zien krijgt.
  */
 
-let userName = "Bruno";
-let userAge = 21;
-let userFavoriteGame = "Minesweeper";
+let userName = "Bruno",
+	userAge = 21,
+	userFavoriteGame = "Minesweeper";
 
 console.log(`Hallo ${userName}, ik hoor dat je ${userAge} jaar oud bent en dat je lievelingsgame ${userFavoriteGame} is.`);

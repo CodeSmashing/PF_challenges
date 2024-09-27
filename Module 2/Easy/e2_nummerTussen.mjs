@@ -8,10 +8,9 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let minimum = Math.floor(Math.random() * 100);
-let maximum = Math.floor(Math.random() * (100 + 1));
-
-let userNumber = parseFloat(await userInput.question("Geef ons een getal: "));
+let minimum = Math.floor(Math.random() * 100),
+	maximum = Math.floor(Math.random() * (100 + 1)),
+	userNumber = parseFloat(await userInput.question("Geef ons een getal: "));
 
 if (userNumber > minimum && userNumber < maximum) {
 	console.log(`Je getal ${userNumber} ligt tussen ${minimum} en ${maximum}.`);

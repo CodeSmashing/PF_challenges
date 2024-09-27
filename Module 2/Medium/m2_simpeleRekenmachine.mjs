@@ -8,9 +8,9 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let userNumber1 = parseFloat(await userInput.question("Geef ons een getal: "));
-let userOperation = await userInput.question("Wat wilt u doen met dit getal? (+ - * /) ");
-let userNumber2 = parseFloat(await userInput.question("Geef ons een ander getal: "));
+let userNumber1 = parseFloat(await userInput.question("Geef ons een getal: ")),
+	userNumber2 = parseFloat(await userInput.question("Geef ons een ander getal: ")),
+	userOperation = await userInput.question("Wat wilt u doen met dit getal? (+ - * /) ");
 
 switch (userOperation) {
 	case "+":

@@ -31,8 +31,8 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-let answerCounter = 0;
-let quizArray = [
+let answerCounter = 0,
+	quizArray = [
 	{
 		question: "Vraag 1: Wat is de hoofdstad van Frankrijk? ",
 		answer: "Parijs",
